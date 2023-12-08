@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the Coastal Area</title>
+    <style>
+        *::-webkit-scrollbar {
+            display: none;
+        }
+        *{
+            -ms-overflow-style: none;  
+            scrollbar-width: none; 
+        } 
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: greenyellow;
+        }
+        header {
+            background-color: black;
+            text-align: center;
+            color: green;
+            font-size: xx-large;
+            width: 100%;
+            padding: 10px; /* Add padding for better visual */
+            box-sizing: border-box;
+        }
+        a{
+            text-align: center;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #ffffffff;
+            text-shadow: none;
+            background: transparent;
+            box-shadow: transparent;
+            border: 1px solid #ffffffff;
+            transition: 0.5s ease;
+            user-select: none;
+            cursor: pointer;
+        }
+        button:hover,:focus {
+            color: #ffffff;
+            background: #812FFF;
+            border: 1px solid greenyellow;
+            text-shadow: 0 0 5px #ffffff,
+                        0 0 10px #ffffff,
+                        0 0 20px #ffffff;
+            box-shadow: 0 0 5px #812FFF,
+                        0 0 20px #812FFF,
+                        0 0 50px #812FFF,
+                        0 0 100px #812FFF;
+        }
+        #l {
+            display: flex;
+            flex: 1; 
+            box-sizing: border-box;
+            padding: 20px;
+            justify-content: space-between; 
+        }
+        #c, #i {
+            width: 48%; 
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            #l {
+                flex-direction: column; 
+            }
+            #c, #i {
+                width: 100%;
+                margin-bottom: 20px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Welcome to tunisia</header>
+    <button id="btn2">back</button>
+    <div id="l">
+    <div id="c">
+    <h1 align="center">The Coastal Area</h1>
+    <P align="center" id="a">Tunisia, a North African gem nestled along the Mediterranean coastline, boasts a captivating coastal region that stretches for approximately 1,148 kilometers, offering a diverse and picturesque landscape. The northern part of the Tunisian coast is defined by the stunning Cap Bon Peninsula, renowned for its fertile plains, charming villages, and ancient ruins that reflect the region's rich history. As one ventures southward, the coastal terrain transforms, revealing a mix of sandy beaches, rocky coves, and crystalline waters that invite locals and tourists alike to indulge in the beauty of the Mediterranean Sea. Notable coastal cities such as Tunis, the capital, and Sousse, with its UNESCO-listed Medina, serve as cultural hubs where history seamlessly blends with modernity. The coastal area is dotted with archaeological sites like Carthage, a testament to Tunisia's Punic and Roman heritage, while the resort town of Hammamet beckons with its azure shores and vibrant arts scene. Fishing villages along the coast provide an authentic glimpse into Tunisia's maritime traditions, where colorful boats line the harbors, and seafood markets brim with fresh catches. The Kerkennah Islands, just off the eastern coast, add a touch of tranquility with their unspoiled landscapes and traditional lifestyle. In addition to its aesthetic allure, the coastal area of Tunisia is a haven for water sports enthusiasts, offering opportunities for windsurfing, sailing, and diving. This mosaic of landscapes and experiences along Tunisia's coastal stretch renders it a captivating destination that seamlessly weaves together history, culture, and natural beauty.</P>
+    <center><button id="btn">Play audio</button></center>
+    <audio id="audioPlayer" src="COASTAL AREA.mp3"></audio>
+    </div>
+    <div id="i">
+    <img src="download.jpg" id="x">
+    <img src="download (3).jpg" id="xx">
+    <img src="download (4).jpg" id="xxx">
+    </div>
+    </div>
+    <script>
+        const playPauseButton = document.getElementById('btn');
+        playPauseButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playPauseButton.textContent = 'Pause audio';
+            } else {              
+                audioPlayer.pause();
+                playPauseButton.textContent = 'Play audio';
+            }
+            });
+        const btn1 = document.getElementById("btn2");
+        btn1.addEventListener("click",function(){
+            window.location.href = "index.html" ;
+        })
+    </script>
+</body>
+</html>

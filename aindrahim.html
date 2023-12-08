@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ain Drahim</title>
+    <style>
+        *::-webkit-scrollbar {
+            display: none;
+        }
+        *{
+            -ms-overflow-style: none;  
+            scrollbar-width: none; 
+        } 
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: greenyellow;
+        }
+        header {
+            background-color: black;
+            text-align: center;
+            color: green;
+            font-size: xx-large;
+            width: 100%;
+            padding: 10px; /* Add padding for better visual */
+            box-sizing: border-box;
+        }
+        a{
+            text-align: center;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #ffffffff;
+            text-shadow: none;
+            background: transparent;
+            box-shadow: transparent;
+            border: 1px solid #ffffffff;
+            transition: 0.5s ease;
+            user-select: none;
+            cursor: pointer;
+        }
+        button:hover,:focus {
+            color: #ffffff;
+            background: #812FFF;
+            border: 1px solid greenyellow;
+            text-shadow: 0 0 5px #ffffff,
+                        0 0 10px #ffffff,
+                        0 0 20px #ffffff;
+            box-shadow: 0 0 5px #812FFF,
+                        0 0 20px #812FFF,
+                        0 0 50px #812FFF,
+                        0 0 100px #812FFF;
+        }
+        #c {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #i {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        @media (max-width: 600px) {
+            #c, #i {
+                width: 100%;
+                display: block;
+                margin: 0;
+            }
+        }
+        #l {
+            display: flex;
+            flex: 1; 
+            box-sizing: border-box;
+            padding: 20px;
+            justify-content: space-between; 
+        }
+        #c, #i {
+            width: 48%; 
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            #l {
+                flex-direction: column; 
+            }
+            #c, #i {
+                width: 100%;
+                margin-bottom: 20px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Welcome to tunisia</header>
+    <button align="left" id="btn2">back</button>
+    <div id="l">
+    <div id="c">
+    <h1 align="center">Ain Draham</h1>
+    <P align="center" id="a">Ain Draham, nestled in the verdant northwest of Tunisia, is a charming oasis of natural beauty and historical significance. This picturesque town, cradled amidst the lush peaks of the Tell Atlas mountains, provides a serene escape from the bustling urban life. Its name, "Ain Draham," translates to "Cold Spring," reflecting the refreshing natural springs that dot the landscape, contributing to the town's pleasant climate. The region's topography is characterized by rolling hills, dense forests, and meandering rivers, creating a haven for nature enthusiasts and outdoor adventurers. Ain Draham's colonial history is evident in its architecture, with quaint French-style villas and buildings that harken back to a bygone era. The town's thermal springs, such as Ain Draham Thermal Baths, add a therapeutic touch to the experience, attracting visitors seeking relaxation and rejuvenation. The nearby Ichkeul National Park, a UNESCO World Heritage Site, showcases a diverse ecosystem with its wetlands, attracting a myriad of bird species, including flamingos and herons. Ain Draham also serves as a gateway to the Kroumirie Mountains, offering hiking trails that lead to panoramic viewpoints, rewarding trekkers with breathtaking vistas of the surrounding landscapes. The town's market, bustling with local vendors, allows visitors to immerse themselves in Tunisian culture, offering handmade crafts, local produce, and traditional delicacies. With its blend of natural beauty, historical charm, and recreational opportunities, Ain Draham stands as a testament to Tunisia's diverse and multifaceted allure. Whether one seeks a tranquil retreat or an adventurous exploration of nature, Ain Draham beckons with its unique blend of history, culture, and scenic landscapes.</P>
+    <center><button id="btn">Play audio</button></center>
+    <audio id="audioPlayer" src="AIN DRAHIM.mp3"></audio>
+    </div>
+    <div id="i">
+    <img src="download (2).jpg" id="z">
+    <img src="download (6).jpg" id="zz">
+    </div>
+    </div>
+    <script>
+        const playPauseButton = document.getElementById('btn');
+        playPauseButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playPauseButton.textContent = 'Pause audio';
+            } else {              
+                audioPlayer.pause();
+                playPauseButton.textContent = 'Play audio';
+            }
+            });
+        const btn1 = document.getElementById("btn2");
+        btn1.addEventListener("click",function(){
+            window.location.href = "index.html" ;
+        })
+    </script>
+</body>
+</html>
